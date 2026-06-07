@@ -1,0 +1,15 @@
+﻿export const ROUTES = {
+  home: "/",
+  solucoes: "/solucoes",
+  comoFunciona: "/como-funciona",
+  sobre: "/sobre",
+  contato: "/contato",
+  login: "/login",
+  dashboard: "/dashboard",
+  admin: "/dashboard/admin",
+  gestor: "/dashboard/gestor",
+  consultor: "/dashboard/consultor",
+  cliente: "/dashboard/cliente",
+  financeiro: "/dashboard/financeiro",
+  suporte: "/dashboard/suporte",
+};

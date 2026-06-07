@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+﻿# SEO Partners
 
-## Getting Started
+## Visão do projeto
 
-First, run the development server:
+SEO Partners é a fundação de um SaaS de marketing digital e SEO voltado para gerenciamento de clientes e operações internas. Esta base foi preparada para desenvolvimento com arquitetura modular, utilizando o App Router do Next.js e foco em RBAC, Supabase e integração com APIs.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js App Router
+- React
+- TypeScript
+- Bootstrap
+- Supabase
+- Axios
+- Zod
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estrutura de pastas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app` - rotas e layout global do Next.js
+- `src/assets/img` - imagens e ativos estáticos
+- `src/components` - componentes de interface reutilizáveis
+- `src/contexts` - providers de contexto do aplicativo
+- `src/dashboard` - área de dashboard e domain-specific components
+- `src/hooks` - hooks customizados
+- `src/layouts` - layouts públicos e de dashboard
+- `src/sections` - seções de página e composição de telas
+- `src/services` - serviços de API e integração
+- `src/styles` - estilos globais e específicos de layout
+- `src/types` - definições de tipos TypeScript e RBAC
+- `src/utils` - constantes, helpers e formatadores
 
-## Learn More
+## Padrão de desenvolvimento
 
-To learn more about Next.js, take a look at the following resources:
+1. **Manter a estrutura**: o app segue o padrão App Router do Next.js com arquivos de layout e page.
+2. **Separar responsabilidades**: serviços, contextos, hooks e componentes possuem suas próprias pastas.
+3. **RBAC preparado**: tipos de roles e permissions criados para futuras regras de acesso.
+4. **Sem telas ainda**: esta etapa é apenas fundação, sem implementação de páginas ou rotas de dashboard.
+5. **Configuração de ambiente**: use `.env.local` para variáveis reais; mantenha `.env.local.example` no repositório.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Como usar
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Instale dependências: `npm install`
+- Rode o projeto: `npm run dev`
+- Popule `.env.local` com as variáveis definidas em `.env.local.example`
