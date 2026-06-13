@@ -1,4 +1,5 @@
-﻿import Image from "next/image";
+import Image from "next/image";
+import Link from "next/link";
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import logoSeoPartners from "@/assets/img/seo-partners-logo.png";
 
@@ -16,26 +17,26 @@ export function Footer() {
 
         <div className="footer-col">
           <h6>Navegação</h6>
-          <a href="/solucoes">Soluções</a>
-          <a href="#como-funciona">Como Funciona</a>
-          <a href="#diferenciais">Diferenciais</a>
-          <a href="/sobre">Sobre Nós</a>
+          <Link href="/solucoes">Soluções</Link>
+          <Link href="/como-funciona">Como Funciona</Link>
+          <Link href="#diferenciais">Diferenciais</Link>
+          <Link href="/sobre">Sobre Nós</Link>
         </div>
 
         <div className="footer-col">
           <h6>Soluções</h6>
-          <a href="#">Tráfego Pago</a>
-          <a href="#">SEO</a>
-          <a href="#">Redes Sociais</a>
-          <a href="#">Automação</a>
+          <Link href="/solucoes/google-ads">Google Ads</Link>
+          <Link href="/solucoes/meta-ads">Meta Ads</Link>
+          <Link href="/solucoes/seo">SEO</Link>
+          <Link href="/solucoes/automacao">Automação</Link>
         </div>
 
         <div className="footer-col">
           <h6>Empresa</h6>
-          <a href="/sobre">Sobre Nós</a>
-          <a href="#">Cases</a>
-          <a href="#">Blog</a>
-          <a href="/contato">Contato</a>
+          <Link href="/sobre">Sobre Nós</Link>
+          <Link href="#cases">Cases</Link>
+          <Link href="#blog">Blog</Link>
+          <Link href="/contato">Contato</Link>
         </div>
 
         <div className="footer-col footer-contact">

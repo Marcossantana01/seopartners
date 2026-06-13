@@ -4,6 +4,7 @@ import { TbChartBar, TbPresentationAnalytics, TbRocket, TbTargetArrow, TbTrophy 
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import bannerHeroSeoPartners from "@/assets/img/banner-hero-seopartners.png";
+import clinicHarmonizeReception from "@/assets/img/clinic-harmonize-reception.png";
 
 export default function Home() {
   return (
@@ -40,13 +41,17 @@ export default function Home() {
 
           <div className="hero-trust mt-4">
             <div className="avatars" aria-hidden="true">
-              {["Rafael", "Camila", "Lucas", "Marina", "Bruno"].map((name) => (
+              {[
+                "https://randomuser.me/api/portraits/men/32.jpg",
+                "https://randomuser.me/api/portraits/women/44.jpg",
+                "https://randomuser.me/api/portraits/men/75.jpg",
+                "https://randomuser.me/api/portraits/women/68.jpg",
+                "https://randomuser.me/api/portraits/men/46.jpg",
+              ].map((avatarUrl) => (
                 <div
                   className="avatar"
-                  key={name}
-                  style={{
-                    backgroundImage: `url(https://api.dicebear.com/9.x/personas/svg?seed=${name}&backgroundColor=facc15,f59e0b,fb923c)`,
-                  }}
+                  key={avatarUrl}
+                  style={{ backgroundImage: `url(${avatarUrl})` }}
                 />
               ))}
             </div>
@@ -280,14 +285,14 @@ export default function Home() {
             </div>
 
             <div className="case-visual" aria-label="Recepção da Clínica Harmonize">
-              <div className="case-ceiling" />
-              <div className="case-wall">
-                <strong>HARMONIZE</strong>
-                <span>CLÍNICA</span>
-              </div>
-              <div className="case-counter">
-                <span>harmonize</span>
-              </div>
+              <Image
+                src={clinicHarmonizeReception}
+                alt="Recepção moderna de uma clínica estética"
+                className="case-visual-image"
+                fill
+                sizes="(max-width: 992px) 100vw, 360px"
+              />
+              <div className="case-visual-overlay" />
               <div className="case-dots"><span /><span /><span /><span /></div>
             </div>
           </div>
@@ -308,7 +313,6 @@ export default function Home() {
 
           <div className="testimonials">
             <div className="test-card">
-              <div className="quote-mark">“</div>
               <p>
                 A SEO Partners não é apenas um fornecedor, é um verdadeiro
                 parceiro do nosso crescimento. Os resultados superaram todas as
@@ -323,7 +327,6 @@ export default function Home() {
               </div>
             </div>
             <div className="test-card">
-              <div className="quote-mark">“</div>
               <p>
                 Transparência, estratégia e execução impecável. Desde que
                 começamos, nosso faturamento não para de crescer.
@@ -337,7 +340,6 @@ export default function Home() {
               </div>
             </div>
             <div className="test-card">
-              <div className="quote-mark">“</div>
               <p>
                 Eles entendem de dados, de gente e de negócio. É raro encontrar
                 um parceiro tão comprometido com resultado.
